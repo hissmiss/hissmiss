@@ -1,0 +1,783 @@
+body {
+    background-image: radial-gradient(circle, #444141, #383637, #2d2c2c, #222222, #181818);
+	margin: 0;
+	padding: 0;
+	font-size: 87%;
+	line-height: 1.5;
+        
+    background-attachment: fixed;
+
+}
+*{
+	box-sizing: border-box;
+}
+.meetus{
+    
+    margin-top: 10%;
+    margin-bottom: -5%;
+    display: table;
+    height: auto;
+    width:100%;
+    
+}
+.white-text{
+        font-family: 'snakebold';
+
+    color:white;
+}
+
+@media screen and (max-width: 916px){
+    .meetus {
+
+        margin-top: 30%;
+
+    }
+        .videoContainer {
+  width: 100vw; /*now it is 100% of viewport (window) width.*/
+  display: inline-block;
+  position: relative;
+}
+
+
+}
+
+
+.videoContainer {
+  width: 60vw; 
+  display: inline-block;
+  position: relative;
+}
+
+.videoContainer::after {
+  padding-top: 56.25%; /* 16:9 ratio - divide height by width and multiply by 100 */
+  display: block;
+  content: '';
+}
+
+.videoContainer>iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+    z-index: 2;
+}
+.header{
+    
+    	text-align: center;
+
+}
+.small {
+  font-size: 16px;
+  display: block;
+  margin-top: -10px;
+    
+          
+    color:white;
+    
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.cont {
+  text-align: center;
+}
+
+.page-head {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-head .lead {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+.btn {
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-lg {
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 1.33333;
+  padding: 10px 16px;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #152836;
+}
+
+.btn-primary {
+  background-color: #152836;
+  border-color: #0e1a24;
+  color: #ffffff;
+}
+
+.btn-primary {
+  border-color: #eeeeee;
+  color: #eeeeee;
+  transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
+}
+
+.page-head h1 {
+  font-size: 42px;
+  margin: 0 0 20px;
+  color: #FFF;
+  position: relative;
+  display: inline-block;
+}
+
+.page-head h1 .version {
+  bottom: 0;
+  color: #ddd;
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  width: 58px;
+  right: -58px;
+}
+
+.demo-gallery > ul {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+
+.demo-gallery > ul > li {
+  margin-bottom: 15px;
+  width: 180px;
+  display: inline-block;
+  margin-right: 15px;
+  list-style: outside none none;
+}
+
+.demo-gallery > ul > li a {
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.demo-gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+
+.demo-gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+
+.demo-gallery > ul > li a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+
+.demo-gallery > ul > li a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.demo-gallery > ul > li a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.demo-gallery .justified-gallery > a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+
+.demo-gallery .justified-gallery > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+  opacity: 1;
+}
+
+.demo-gallery .justified-gallery > a .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+
+.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.demo-gallery .video .demo-gallery-poster img {
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 48px;
+}
+
+.demo-gallery.dark > ul > li a {
+  border: 3px solid #04070a;
+}
+
+
+/*************************************************************************************/
+/************************************ NAV BAR ****************************************/
+/*************************************************************************************/
+.nav{
+    	font-size: 87%;
+	line-height: 1.5;
+
+    font-family: 'snakebold';
+    	text-align: center;
+
+    
+}
+a{
+	text-decoration: none;
+    
+}
+.nav ul,.navmobile ul{
+	list-style: none;                 /* remove dots of li */
+	margin: 0;
+	padding: 0;
+}
+.nav li.navmobile li{
+	display: inline-block;
+    /* to allign nav items horizontally */
+}
+.nav a,.navmobile a{
+	color: white;
+    font-size: 1vw;
+}
+
+
+/***************************************************************************/
+.logo h1{
+                
+    font-family: 'snakebold';
+	font-weight: 700;
+    text-shadow: 3px 2px 0px #fff;
+    line-height: 0.87;
+}
+/***************************for fixed nav*********************/
+.header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+    z-index: 9;
+
+}
+.page2content,.page3content{
+	margin-top: 0px;                                 /*****/
+}
+
+
+/************************** MEDIA QUERIES ************************************/
+
+/************************** MOBILES ******************************************/
+
+@media screen and (max-width: 480px){
+/*******************************************************************************/
+/*********************** hamburger menu for mobile******************************/
+/*******************************************************************************/
+.page1 h2{
+        
+    position: absolute;
+    left:15%;
+    right:15%;
+    font-size: 10px;
+    line-height: 2;
+    bottom:20%;
+
+}
+    .page1{
+        
+        height: 100vh;            
+}
+
+
+	.hideme{                      /* hides the logo after certain scroll*/
+		display: none;
+	}
+	.nav{
+		display: none;
+	}
+	.toggleMenu{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		padding: 15px 20px 15px 15px;
+		cursor: pointer;
+		background: mediumpurple;
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.sidemenu{
+		position: fixed;
+		top: 0px;
+		width: 240px;
+		margin-left: -250px;
+		overflow: hidden;
+		height: 100vh;
+		background: rgba(17,17,17,0.9);  /* for opacity of side bar without affecting anything */
+		opacity: 0.9;                    /* to see background image*/
+
+		transition: all 0.3s ease-in-out;
+	}
+
+	.cross{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		cursor: pointer;
+		opacity: 0.7;
+
+		transition: all 0.3s ease-in-out;
+	}
+	.cross:hover{
+		opacity: 1;
+	}
+	.mobilelogoinsidebar h1 {
+		margin: 0;
+	    font-weight: 700;
+	    line-height: 0.87;
+	}
+	.mobilelogoinsidebar a{
+		color: white;
+                    
+        font-family: 'snakebold';
+
+                
+        font-size: 17px;
+
+	}
+	.mobilelogoinsidebar{
+		margin-top: 70px;
+	}
+         .mainTitle
+        {
+            display: none;
+    }
+	.mobilelogo{
+            
+        font-family: 'snakebold';
+
+		font-size: 2em;
+		margin: 0;
+	    font-weight: 700;
+	    text-shadow: 3px 2px 0px #fff;
+	    line-height: 0.87;
+	    margin-top: 20px;
+	    transition: all 10s ease-in-out;
+	}
+	.mobilelogo a{
+                
+        font-family: 'snakebold';
+
+        
+		color: white;
+        font-size:27px
+	}
+	.navmobile{
+		width: 100vw;
+	}
+
+	.navmobile .navlistmobile{
+		font-size: 1.4rem;
+		margin:20px;
+		display: block;
+		width: 200px;
+		margin-left:auto;
+		margin-right: auto;
+	}
+	.navlistmobile li{
+		padding: 12px 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+		color: #D8D8D8;
+		border-bottom:solid 1px #D8D8D8;
+		cursor: pointer;
+
+		transition: all 0.3s ease-in-out;
+	}
+	.navlistmobile li a{
+                font-family: 'snakebold';
+
+                font-size: 17px;
+
+    }
+    
+
+	.showmenu{
+		margin-left: 0px;
+	}
+
+	.changeopacity{
+		opacity: 0;
+	}
+
+}
+/*************************mobile ham ends *******************************/
+/***************************************************************************/
+
+
+/******************************** TABLETS *******************************/
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+
+.page1 h2{
+        font-size: 16px;
+    margin: 0 auto;
+    position: absolute;
+    left:10%;
+    right:10%;
+    bottom:20%;
+
+}
+      .page1{
+        
+        height: 100vh;            
+}
+
+
+	.navmobile{
+		display: none;
+	}
+         .mainTitle
+        {
+            display: none;
+    }
+
+	.page2content,.page3content{
+		margin-top: 60px;          /* set margin top equal to header ka height*/
+	}
+
+	.navlist li{
+		font-size: 1rem;
+	}
+	.iamselected{                           /* add this class to whichever li to focus*/
+		border-bottom: 1.5px solid white;          /* adds underline to li*/
+		margin-bottom: -12px;
+		padding-bottom: 10.5px;
+	}
+	.logo{
+		transition: all 0.3s ease-in-out;
+		padding-bottom: 4%;
+	}
+	.navwrapper{
+		transition: all 0.3s ease-in-out;
+		padding-top:3rem;
+	    padding-right: 1rem;
+	    padding-bottom: 0.7rem;
+	    padding-left: 1rem;
+	}
+	                          /******** for trans to black scrolling of nav ******/
+	.navwrapper{
+		background: transparent;
+		padding-top:1rem;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.notonhomepage{             /* add this class when you want to shift to black nav*/
+		background: rgba(0, 0, 0, 0.7);
+		border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
+		padding-top: 1.3rem;
+	}
+
+	.navlist li a{
+		padding: 20%;
+        font-size: 14px;
+	}
+	.navlist{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	
+	.navlist li{
+		flex-grow: 1;
+	}
+
+}
+
+/******************************** DESKTOPS ******************************/
+@media screen and (min-width:769px ){
+    
+    	.hidemetoo{                      /* hides the logo after certain scroll*/
+		opacity: 0;
+	}
+
+    
+    
+
+	.navmobile{
+		display: none;
+	}
+
+	.page2content,.page3content{
+		margin-top: 62px;          /* set margin top equal to header ka height*/
+	}
+
+
+	.navwrapper{
+		transition: all 0.3s ease-in-out;
+		padding-top: 3.5rem;
+    	padding-right: 1rem;
+    	padding-bottom: 0.7rem;
+    	padding-left: 1rem;
+	}                                  /***** scrolling trans to black***********/
+	.navwrapper{
+		background: transparent;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.notonhomepage{             /* add this class when you want to shift to black nav*/
+		background: rgba(0, 0, 0, 0.7);
+		border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
+		padding-top: 1.2rem;
+	}
+
+
+	.nav{
+        display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.logo{
+		transition: all 0.3s ease-in-out;
+		flex-basis: 20%;
+	}	
+	.navlist{
+		flex-basis: 55%;
+	}
+	.navlist li{
+		font-size: 1.3rem;
+	}
+	.navlist li a{
+		padding: 20%;
+	}
+	.navlist{
+        display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+	.navlist li{
+		flex-grow: 1;
+	}
+	.iamselected{                          /* add this class to whichever li to focus*/
+								           /* adds underline to li*/
+		border-bottom: 3px solid white;
+		margin-bottom: -12px;
+		padding-bottom: 9px;
+	}
+}
+
+        
+        .mainTitle
+        {
+            margin-top:10%;
+            background-color:transparent;
+            height:auto;
+            width:100%;
+            text-align: center;
+            padding-top: 1vh;            
+            line-height: 0;
+
+        }
+        
+        .mainTitle h1{
+            font-size:100px;
+            font-family: 'snakebold';
+        }
+.mainTitle h2{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+
+}
+        
+        .hiss{
+            color:lawngreen;
+            text-shadow: 3px 3px purple;
+
+        }
+        .miss{
+            color:mediumpurple;
+              text-shadow: 3px 3px purple;
+        }
+        
+        .brackets{
+            color:orange;
+            text-shadow: 3px 3px purple;
+        }
+
+        #lottie{
+            background-color:transparent;
+            width: 30%;
+            height: 30%; 
+            display:block;
+            overflow: hidden;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            animation: fade-in 2s ease-in;
+        }
+        
+        @keyframes fade-in{
+            0%{
+                opacity: 0;
+            }
+            
+            20%{
+                opacity: 1;
+                
+            }
+            90%{
+                opacity: 1;
+                
+            }
+
+            100%{
+                opacity: 0;
+                display: none;
+            }  
+        }
+        
+        
+        
+        @keyframes show-web-page{
+            
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity:1;
+            }
+        }
+
+.page{
+      display: table;
+
+}
+
+.page2 #myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    position:sticky;
+    
+}
+.page2,.page3{
+    	text-align: center;
+
+	width: 100%;
+	min-height: 7vh;
+	height: auto;
+	background: rgba(255,255,255,0.9);
+	color: black;
+	font-size: 1.5rem;
+    vertical-align:middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 4;
+    position: relative;
+}
+
+.page2content{
+    width: 100%;
+}
+.page3{
+	background: white;
+	color:#1d9a47;
+}
+.page2 h1{
+        font-family: 'Tajawal', sans-serif;
+
+    font-size: 3vh;
+
+}
+.page2content,.page3content{
+	margin-top: 0px;                                 /*****/
+}
+	.page2content,.page3content{
+		margin-top: 62px;          /* set margin top equal to header ka height*/
+	}

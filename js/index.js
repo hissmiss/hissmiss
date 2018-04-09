@@ -124,4 +124,129 @@ for (var i = 1, l = frame_count; i <= l; i++) {
     //.addIndicators()
     .addTo(controller);
 }
+    
+    
+    
+    
     });
+
+function hideit(){
+    frame = window.document.frames[0];
+    frame.document.getElementsByClassName("navbar")[0].style.display="none";
+}
+
+
+
+$('#search-form, #about-page').hide()
+$('main').hide()
+
+$(document).ready(function () {
+  showAboutPage()
+  function showSearchForm () {
+    $('#search-form').slideDown()
+    $('#search-btn-container').addClass('active')
+  }
+
+  function hideSearchForm () {
+    $('#search-form').slideUp()
+    $('#search-btn-container').removeClass('active')
+  }
+
+  function showAboutPage () {
+    $('#about-page').slideDown()
+    $('#about-btn-container').addClass('active')
+  }
+
+  function hideAboutPage () {
+    $('#about-page').slideUp()
+    $('#about-btn-container').removeClass('active')
+  }
+
+  // SEARCH BUTTON:
+  $('#search-btn').click(function () {
+    if ($('#search-btn-container').hasClass('active')) {
+      hideSearchForm()
+    } else {
+      hideAboutPage()
+      $('main').show()
+      showSearchForm()
+    }
+  })
+
+  // On ENTER keypress: Wiki API + Inject the Wiki Cards:
+  $('#search-input').on('keypress', function (e) {
+    if (e.keyCode === 13) {
+      // Clean the Wiki Cards Holder inner HTML:
+      document.getElementById('wiki-cards-holder').innerHTML = ''
+      let searchInput = document.getElementById('search-input').value
+      // API Call:
+        // Test Link: https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=hello&format=json
+      let APIlink = 'https://en.wikipedia.org/w/api.php?action=query&origin=*&list=search&srsearch=' + searchInput + '&format=json'
+      $.ajax(APIlink, {
+        dataType: 'json',
+        data: {
+          origin: '*'
+        },
+        type: 'GET',
+        success: function (json) {
+          // Total Pages Badge Result:
+          document.getElementById('results-container').innerHTML = '<span class="new badge blue" data-badge-caption="articles" id="results">' + json.query.searchinfo.totalhits + '</span>'
+          // Inject the Wiki Cards, each one with their content, in the Wiki Cards Holder inner HTML:
+          for (let i = 0; i < json.query.search.length; i++) {
+            // Wikipedia uses _ to separate words on links.
+            let pageNameWikiLink = json.query.search[i].title.replace(/\s/g, '_')
+            document.getElementById('wiki-cards-holder').innerHTML += '<a href="" onclick="newPopUp(\'' + pageNameWikiLink + '\'); return false;">' + // The function "newPopUp(pageNameWikiLink)" is printed on the wiki card.
+                                                                        '<div class="col m12">' +
+                                                                          '<article class="card horizontal z-depth-2 hoverable magictime vanishIn">' +
+                                                                            '<div class="card-content">' +
+                                                                              '<div class="card-title">' +
+                                                                                '<h4 id="wiki-title">' + json.query.search[i].title + '</h4>' +
+                                                                              '</div>' +
+                                                                              '<p class="wiki-content">' + json.query.search[i].snippet + '</p>' +
+                                                                            '</div>' +
+                                                                          '</article>' +
+                                                                        '</div>' +
+                                                                      '</a>'
+          }
+        }
+      })
+    }
+  })
+
+  // ABOUT BUTTON (About Page):
+  $('#about-btn').click(function () {
+    if ($('#about-btn-container').hasClass('active')) {
+      hideAboutPage()
+      $('main').show()
+    } else {
+      $('main').hide()
+      hideSearchForm()
+      showAboutPage()
+    }
+  })
+})
+
+$('.pop-up').hide(0);
+$('.pop-up-container').hide(0);
+
+$('.pop-up-button').click(function(){
+  $('.pop-up-container').show(0);
+  $('.pop-up').fadeIn(300);
+      
+    $('.hide-this').hide(0);
+
+  $('.pop-up-button').hide(0);
+});
+$('.pop-up span').click(function() {
+  $('.pop-up-container').hide(0);
+  $('.pop-up').hide(0);
+  $('.pop-up-button').show(0);
+      $('.hide-this').show(0);
+
+});
+
+$(document).ready(function() {
+  $('#lightgallery').lightGallery({
+    pager: true
+  });
+});
